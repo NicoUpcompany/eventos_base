@@ -7,11 +7,8 @@ import foto3 from '../../../assets/img/stand/sura/2.jpg';
 import foto4 from '../../../assets/img/stand/sura/3.jpg';
 // import foto5 from '../../../assets/img/stand/sura/4.jpg';
 // import foto6 from '../../../assets/img/stand/sura/logo.jpg';
-import logo from '../../../assets/img/sura.png';
 
 
-// import Banner2 from '../../../assets/img/test2.png';
-import Banner2 from '../../../assets/img/test2.png';
 
 // import bancochile1 from '../../../../assets/img/bancochile/1.jpg';
 // import bancochile2 from '../../../../assets/img/bancochile/2.jpg';
@@ -39,10 +36,10 @@ const Sura = ({url, setUrl}) => {
         bodi[0].classList.remove('stop');
         setUrl("");
     }
-    const download = () => {
-        var url='https://upwebinar.cl/proyectos/icare/stands/bancochile/Reporte.pdf';    
-        window.open(url, 'Download');  
-    }
+    // const download = () => {
+    //     var url='https://upwebinar.cl/proyectos/icare/stands/bancochile/Reporte.pdf';    
+    //     window.open(url, 'Download');  
+    // }
     return ( 
         <>
             <div className="standMercurio" id="sura">
@@ -58,7 +55,7 @@ const Sura = ({url, setUrl}) => {
 Lo que nos define es nuestro propósito de Nuestro propósito es entregar bienestar a través de soluciones integrales, para facilitar la vida de personas y empresas, aportando al desarrollo de la comunidad. Creemos que el valor de nuestra gestión está en contribuir a la reducción de la incertidumbre frente al presente y al futuro.
                     </p>
                     <div className="video2">
-                        <iframe src={url} width="100%" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                        <iframe src={url} width="100%" height="315" title="video sura" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
                     </div>
                     <div className="galeri">
                         <Slider {...settings}>

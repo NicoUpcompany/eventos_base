@@ -9,9 +9,7 @@ import foto6 from '../../../assets/img/stand/deyel/6.jpg'
 import header from '../../../assets/img/stand/deyel/header.jpg'
 import logo from '../../../assets/img/stand/deyel/logo.jpg'
 import Slider from "react-slick";
-import footer from '../../../assets/img/paginaweb.png'
-import footer2 from '../../../assets/img/telefono.png'
-import footer3 from '../../../assets/img/email.png'
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // import footer1 from '../../assets/img/footerdeli2.png'
@@ -38,9 +36,9 @@ const Deyel = ({url, setUrl}) => {
         <div className="standMediano" id="deyel">
             <div className="capa">
              <div className="header">
-                <img style={{color:'black'}}  className="close" src={close} onClick={close2} />
+                <img style={{color:'black'}}  className="close" src={close} onClick={close2} alt="close2" />
                 <LazyLoadImage effect="blur" src={header} width="100%" />
-                <img src={logo} className="logotipo" width="100px" />
+                <img src={logo} className="logotipo" width="100px"  alt="logo-deyel"/>
             </div>
             <div className="content2">
                 <h2 style={{color:'white'}}>Deyel</h2>
@@ -50,7 +48,7 @@ const Deyel = ({url, setUrl}) => {
                 ¿Tienes una buena idea? Anímate a hacerla realidad con Deyel: <a href="https://www.deyel.com/iniciar-trial/" target="_blank" rel="noopener noreferrer">Inicia una prueba ahora</a></p>
 
                 {/* <iframe src={url} width="100%" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> */}
-                <iframe width="100%" height="315" src={url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src={url} title="video-deyel" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <div className="imagenes">
                 <Slider {...settings}>
                     <div className="imagen">

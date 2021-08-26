@@ -9,9 +9,7 @@ import foto6 from '../../../assets/img/stand/bizarro/6.jpg'
 import header from '../../../assets/img/stand/bizarro/header.jpg'
 import logo from '../../../assets/img/stand/bizarro/logo.jpg'
 import Slider from "react-slick";
-import footer from '../../../assets/img/paginaweb.png'
-import footer2 from '../../../assets/img/telefono.png'
-import footer3 from '../../../assets/img/email.png'
+
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // import footer1 from '../../assets/img/footerdeli2.png'
@@ -38,15 +36,15 @@ const Bizarro = ({url, setUrl}) => {
         <div className="standMediano" id="bizarro">
             <div className="capa">
              <div className="header">
-                <img style={{color:'black'}}  className="close" src={close} onClick={close2} />
+                <img style={{color:'black'}}  className="close" src={close} onClick={close2} alt="close2" />
                 <LazyLoadImage effect="blur" src={header} width="100%" />
-                <img src={logo} className="logotipo" width="100px" />
+                <img src={logo} className="logotipo" width="100px" alt="logo bizarro"/>
             </div>
             <div className="content2">
                 <h2 style={{color:'white'}}>Bizarro Lab</h2>
                 <p> </p>
 
-                <iframe src={url} width="100%" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+                <iframe src={url} width="100%" height="315" frameborder="0"  title="video bizarro"allow="autoplay; fullscreen" allowfullscreen></iframe>
 
                 <div className="imagenes">
                 <Slider {...settings}>

@@ -1,4 +1,4 @@
-import React from "react";
+
 import twemoji from "twemoji";
 import ReactHtmlParser from "react-html-parser";
 

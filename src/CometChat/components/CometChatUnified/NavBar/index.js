@@ -7,7 +7,6 @@ import CometChatUserList from "../../CometChatUserList";
 import CometChatGroupList from "../../CometChatGroupList";
 import CometChatConversationList from "../../CometChatConversationList";
 import CometChatUserInfoScreen from "../../CometChatUserInfoScreen";
-import { Popover, Tooltip } from 'antd';
 
 import {
   footerStyle,
@@ -22,8 +21,6 @@ import contactGreyIcon from "./resources/people-grey-icon.svg";
 import contactBlueIcon from "./resources/people-blue-icon.svg";
 import groupGreyIcon from "./resources/group-chat-grey-icon.svg";
 import groupBlueIcon from "./resources/group-chat-blue-icon.svg";
-import moreGreyIcon from "./resources/more-grey-icon.svg";
-import moreBlueIcon from "./resources/more-blue-icon.svg";
 
 
 const navbar = (props) => {
@@ -70,7 +67,6 @@ const navbar = (props) => {
   const chatsTabActive = (props.tab === "conversations") ? true : false;
   const userTabActive = (props.tab === "contacts") ? true : false;
   const groupsTabActive = (props.tab === "groups") ? true : false;
-  const moreTabActive = (props.tab === "info") ? true : false;
 
   return (
     <React.Fragment>

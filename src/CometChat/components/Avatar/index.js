@@ -20,7 +20,6 @@ class Avatar extends React.Component {
   render() {
 
     const borderWidth = this.props.borderWidth || '1px';
-    const borderColor = this.props.borderColor || '#AAA';
     const cornerRadius = this.props.cornerRadius || '50%';
     const image = this.props.image;
 

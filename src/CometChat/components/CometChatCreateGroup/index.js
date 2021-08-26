@@ -16,8 +16,7 @@ import {
     tableBodyStyle,
     tableErrorStyle,
     inputStyle,
-    tableFootStyle,
-    btnContainerStyle,
+    tableFootStyle
 } from "./style";
 
 import closeIcon from "./resources/clear.svg";

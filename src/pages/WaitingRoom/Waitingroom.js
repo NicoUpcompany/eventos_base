@@ -30,7 +30,6 @@ import logo7 from '../../assets/img/upcompany.png';
 import logo8 from '../../assets/img/sura.png';
 import logo9 from '../../assets/img/mercadowibai.png';
 import logo12 from '../../assets/img/stand/deyel/logo.jpg';
-import logo10 from '../../assets/img/uber.png';
 import logo11 from '../../assets/img/df.png';
 import imagenmovil from '../../assets/img/imagenmovil.png';
 import imagenmovil2 from '../../assets/img/imagenmovil2.png';
@@ -42,8 +41,6 @@ import Expositor5 from '../../assets/img/speakers/s5.jpg';
 import Expositor6 from '../../assets/img/speakers/s6.jpg';
 import Expositor7 from '../../assets/img/speakers/s7.jpg';
 import Expositor8 from '../../assets/img/speakers/s8.jpg';
-import opciones from '../../assets/img/opciones.png';
-import agrandar from '../../assets/img/agrandar.png';
 import cerrar from '../../assets/img/cerrar.png';
 import VolumeOffIcon from '@material-ui/icons/VolumeOff';
 import audio from '../../assets/audio/audio.mp3';
@@ -61,7 +58,6 @@ const WaitingRoom = () => {
     const [notifications, setNotifications] = useState(true);
     const [url, setUrl] = useState(true);
     const [updateData, setUpdateData] = useState(0);
-    const [standName, setStandName] = useState('');
 
     useEffect(() => {
         const wow = new WOW();
@@ -453,12 +449,6 @@ const WaitingRoom = () => {
                                 <img src={logo} alt="logo" />
                             </div>
                             <div className="opciones">
-                                {/* <div>
-                                    <img src={opciones} alt="opciones" />
-                                </div>
-                                <div>
-                                    <img src={agrandar} alt="agrandar"/>
-                                </div> */}
                                  <div onClick={() => OnOffNotifications()}>
                                     {notifications?
                                    <VolumeUpIcon className="icon"/>

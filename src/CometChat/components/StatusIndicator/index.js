@@ -1,4 +1,3 @@
-import React from "react";
 
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
@@ -18,7 +17,6 @@ const statusindicator = (props) => {
     }
 
     const borderWidth = props.borderWidth || '1px';
-    const borderColor = props.borderColor || '#AAA';
     const cornerRadius = props.cornerRadius || '50%';
   
     const getStyle = () => ({borderWidth:borderWidth, borderStyle:'solid',borderColor:'#b1529f' ,'borderRadius': cornerRadius})

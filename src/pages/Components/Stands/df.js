@@ -1,17 +1,11 @@
 import React from 'react';
 import close from '../../../assets/img/close.png'
 import Banner from '../../../assets/img/stand/df/header.jpg';
-import Banner2 from '../../../assets/img/test2.png';
 import foto2 from '../../../assets/img/stand/df/1.jpg';
 import foto3 from '../../../assets/img/stand/df/2.jpg';
 import foto4 from '../../../assets/img/stand/df/3.jpg';
 import foto5 from '../../../assets/img/stand/df/4.jpg';
-// import header from '../../../assets/img/stand/df/header.jpg'
-// import logo from '../../../assets/img/stand/deyel/logo.jpg'
-import Slider from "react-slick";
-import footer from '../../../assets/img/paginaweb.png'
-import footer2 from '../../../assets/img/telefono.png'
-import footer3 from '../../../assets/img/email.png'
+ import Slider from "react-slick";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 
 // import footer1 from '../../assets/img/footerdeli2.png'
@@ -38,7 +32,7 @@ const Df = ({url, setUrl}) => {
         <div className="standMediano" id="df">
             <div className="capa">
              <div className="header">
-                <img style={{color:'black'}}  className="close" src={close} onClick={close2} />
+                <img style={{color:'black'}}  className="close" src={close} onClick={close2} alt="close"/>
                 <LazyLoadImage effect="blur" src={Banner} width="100%" />
                 {/* <img src={logo} className="logotipo" width="100px" /> */}
             </div>
@@ -48,7 +42,7 @@ const Df = ({url, setUrl}) => {
                         economía y finanzas.</p>
 
                 {/* <iframe src={url} width="100%" height="315" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe> */}
-                <iframe width="100%" height="315" src={url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="100%" height="315" src={url} frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="DF"/>
                 <div className="imagenes">
                 <Slider {...settings}>
                     {/* <div className="imagen">

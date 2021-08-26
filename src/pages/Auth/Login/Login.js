@@ -7,12 +7,10 @@ import jwtDecode from 'jwt-decode';
 import Cronometro from '../../Components/Cronometro';
 import { emailValidation } from '../../../utils/formValidation';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../../../utils/constants';
-import { COMETCHAT_CONSTANTS } from '../../../consts';
 import { signInApi } from '../../../api/user';
 import { getTimeGlobal2 } from '../../../api/time';
 import { visitApi, publicIpApi } from '../../../api/stats';
 
-import trama from '../../../assets/img/trama.mp4';
 import logo from '../../../assets/img/up.png';
 
 const Login = () => {

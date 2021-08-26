@@ -3,8 +3,7 @@ import React from "react";
 /** @jsx jsx */
 import { jsx } from '@emotion/core';
 
-import { CometChat } from "@cometchat-pro/chat";
-
+ 
 import ReadReciept from "../ReadReciept";
 
 import {

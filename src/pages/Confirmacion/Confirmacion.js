@@ -74,7 +74,7 @@ const Confirmacion = () => {
     }
     const abrirCerrar = () => {
         let doc = document.getElementById("opciones");
-        if(doc.style.height=='0px'){
+        if(doc.style.height==='0px'){
             doc.style.height='auto'
             doc.style.transitionDuration ='1s'
         }else{
