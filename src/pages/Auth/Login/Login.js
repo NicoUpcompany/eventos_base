@@ -4,7 +4,7 @@ import { LoadingOutlined } from '@ant-design/icons';
 import $ from 'jquery';
 import { CometChat } from "@cometchat-pro/chat";
 import jwtDecode from 'jwt-decode';
-
+import Cronometro from '../../Components/Cronometro';
 import { emailValidation } from '../../../utils/formValidation';
 import { ACCESS_TOKEN, REFRESH_TOKEN } from '../../../utils/constants';
 import { COMETCHAT_CONSTANTS } from '../../../consts';
@@ -139,13 +139,12 @@ const Login = () => {
 	const getTime2 = async (interval) => {
 		try{
 			const resp = await getTimeGlobal2();
-			const timeApi = new Date(resp.time).getTime();
+			const timeApi = new Date(resp.time).valueOf();
 			$('.cronometro').each(function(){
 				const $this = $(this);
-				let now = timeApi;
-				
+                let now = timeApi;
+                const countDownDate = new Date().valueOf()+5000;
 				interval = setInterval(function() {
-					const countDownDate = new Date(resp.eventTime).getTime();
 					const distance = countDownDate - now;
 					const days_t = Math.floor(distance / (1000 * 60 * 60 * 24));
 					const hours_t = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -235,71 +234,33 @@ const Login = () => {
                 if (decodedToken.email.length > 0) {
                     user.setName(decodedToken.fullName);
                 }
-                // CometChat.createUser(user, COMETCHAT_CONSTANTS.AUTH_KEY).then(
-                //     user => {
-                //         setRegisterForm(true);
-                //     },error => {
-                //         if (error.details.uid[0] === 'The uid has already been taken.') {
-                //             CometChat.updateUser(user, COMETCHAT_CONSTANTS.AUTH_KEY).then(
-                //                 user => {
-                //                     setRegisterForm(true);
-                //                 }, error => {
-                //                     setRegisterForm(true);
-                //                 }
-                //             )
-                //         } else {
-                //             setLoading(false);
-                //             notification["error"]({
-                //                 message: 'Ocurrió un error'
-                //             });
-                //         }
-                //     }
-                // )
 			}
 		}
 	};
 	
-    const antIcon = <LoadingOutlined style={{ fontSize: 50, color: '#F511FF' }} spin />;
+    //Spinner luego de cargar
+    const antIcon = <LoadingOutlined style={{ fontSize: 50, color: '#000000' }} spin />;
 	
     return ( 
 		<Spin spinning={loading} size="large" tip="Cargando..." style={{color: '#F511FF'}} indicator={antIcon}>
-			<div className="fondo">
+            <div className="fondo">
+                {/* Banner del login */}
+                <div className="bannerLogin" >
+                    <div className="contenedorLogo">
+                        <img src={logo} alt="logo" />
+                        <h1>Up webinar</h1>
+                    </div>
+                </div>
 				<div className="contenedorRegistro">
-					<video src={trama} width="100%" autoPlay loop muted />
 					<div className="row">
+                         <h2 className="text-ingreso">Ingresar</h2>
 						<div className="form">
-							<img src={logo} alt="logo" />
-							<h1>Ingresar</h1>
 							<span className="login">Jueves 17 Diciembre de 2020 - 9:30 a 12:00 hrs.</span>
-                            <div className="cronometro">
-                                <div>
-                                    <h1>01</h1>
-                                    <span>Día</span>
-                                </div>
-                                <div>
-                                    <h1>01</h1>
-                                    <span>Hora</span>
-                                </div>
-                                <div>
-                                    <h1>01</h1>
-                                    <span>Minutos</span>
-                                </div>
-                                <div>
-                                    <h1>01</h1>
-                                    <span>Segundos</span>
-                                </div>
-                            </div>
+                            {/* Componente del cronometro */}
+                            <Cronometro/>
+
 							<div className="card">
 								<form onChange={changeForm} onSubmit={(e) => { e.preventDefault(); e.stopPropagation(); register(); }}>
-									{/* <div className="campo">
-										<input 
-											type="text"
-											placeholder="Nombre y Apellido"
-											name="fullName"
-											onChange={inputValidation}
-                                			value={inputs.fullName}
-										/>
-									</div> */}
 									<div className="campo">
 										<input
 											type="email"
@@ -310,7 +271,7 @@ const Login = () => {
 										/>
 									</div>
 									<div className="campobutton">
-										<button style={{cursor: 'pointer'}}>¡Entra al evento!</button>
+										<button style={{cursor: 'pointer'}}>Ingresar</button>
 									</div>
                                     <a href="/registro" style={{marginTop:'10px', float:'left',width:'100%'}}>Aún no me registro</a>
 								</form>
