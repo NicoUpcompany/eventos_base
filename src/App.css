@@ -42,7 +42,7 @@ body {
 .bannerLogin {
   width: 100%;
   background-image: url("./assets/img/fondoConfirmacion.png");
-  padding: 20px;
+  padding: 10px;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -77,10 +77,7 @@ body {
   background-repeat: no-repeat;
   height: 100vh;
   overflow: hidden;
-}
-
-.fondo .contenedorRegistro h2 {
-  font-size: 36px;
+  margin-top: 0;
 }
 
 .fondo .contenedorRegistro .row {
@@ -88,13 +85,17 @@ body {
   width: 100%;
   max-width: 460px;
   position: absolute;
-  top: 50%;
+  top: 35%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
 
 .text-ingreso {
+  margin-top: 10px;
+  padding: 10px 0;
   text-align: center;
+  font-size: 36px;
+  font-weight: bold;
 }
 
 .fondo .contenedorRegistro .row .form {

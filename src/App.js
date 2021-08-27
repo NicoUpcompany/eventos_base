@@ -3,7 +3,7 @@ import { Router, Route, Switch, Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createBrowserHistory } from 'history';
 
-import RegisterScreen from './pages/Auth/Register/Register';
+import SingUp from './pages/SingUp/SingUp';
 import Login from './pages/Auth/Login/Login';
 import WaitingRoom from './pages/WaitingRoom/Waitingroom';
 // import StreamingScreen from './pages/Streaming/Streaming';
@@ -34,7 +34,7 @@ class App extends React.Component {
                     <Switch>
                         <Route exact path="/iniciarsesion" component={ Login } />
                         <Route exact path="/streaming" component={ WaitingRoom } />
-                        <Route exact path="/registro" component={ RegisterScreen } />
+                        <Route exact path="/registro" component={ SingUp } />
                         {/* <Route exact path="/streaming" component={ StreamingScreen } /> */}
                         {/* <Route path="/videollamada" component={ VideoChatApp } /> */}
                         <Route exact path="/confirmacion" component={ Confirm } />

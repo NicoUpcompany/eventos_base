@@ -250,10 +250,11 @@ const Login = () => {
                     </div>
                 </div>
 				<div className="contenedorRegistro">
+                    <h2 className="text-ingreso">Ingresar</h2>
 					<div className="row">
-                         <h2 className="text-ingreso">Ingresar</h2>
 						<div className="form">
-							<span className="login">Jueves 17 Diciembre de 2020 - 9:30 a 12:00 hrs.</span>
+                            <span className="login">Jueves 17 Diciembre de 2020 - 9:30 a 12:00 hrs.</span>
+                            
                             {/* Componente del cronometro */}
                             <Cronometro/>
 
